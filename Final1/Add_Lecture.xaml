@@ -1,0 +1,75 @@
+﻿<Page
+    x:Class="Final1.Add_Lecture"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Final1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Margin="12,-20,12,0" Background="#FFA69E">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="31*"/>
+        </Grid.RowDefinitions>
+        <Grid x:Name="maingrid" Grid.Row="1" Margin="0,0,0,0">
+            <StackPanel >
+                <TextBlock Name="NSubject" Grid.Row="2"  Text="Name of the subject" Foreground="Black" Width="200"/>
+                <TextBox  BorderBrush="LightGray"  Name="NSubject1" Width="200"/>
+                <TextBlock Name="CSubject" Grid.Row="2"  Text="Subject code" Foreground="Black" Width="200"/>
+                <TextBox  BorderBrush="LightGray" Grid.Row="2"  Name="CSubject1" Width="200"/>
+                <TextBlock Name="NCredits" Grid.Row="2"  Text="Number of credits" Foreground="Black" Width="200"/>
+                <TextBox  BorderBrush="LightGray" Grid.Row="2"  Name="NCredits1" Width="200"/>
+                <TextBlock Name="SDay" Grid.Row="2"  Text="Select day" Foreground="Black" Width="200"/>
+                <ComboBox x:Name="comboBox" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="200">
+                    <ComboBoxItem Name="day1">Sunday</ComboBoxItem>
+                    <ComboBoxItem Name="day2">Monday</ComboBoxItem>
+                    <ComboBoxItem Name="day3">Tuesday</ComboBoxItem>
+                    <ComboBoxItem Name="day4">Wednesday</ComboBoxItem>
+                    <ComboBoxItem Name="day5">Thursay</ComboBoxItem>
+                    <ComboBoxItem Name="day6">Friday</ComboBoxItem>
+                    <ComboBoxItem Name="day7">Saturday</ComboBoxItem>
+                    <ComboBoxItem/>
+                </ComboBox>
+                <TextBlock Name="STime" Grid.Row="2"  Text="Select time" Foreground="Black" HorizontalAlignment="Center"/>
+                <TextBlock Name="TFrom" Grid.Row="2"  Text="From" HorizontalAlignment="Center" Foreground="Black"/>
+                <TimePicker Name="timpick" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="200"/>
+                <TextBlock Name="TTo" Grid.Row="2"  Text="To" Foreground="Black" HorizontalAlignment="Center"/>
+                <TimePicker Name="timepick2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="200"/>
+                <Button Name="ALbtn" Content="OK" HorizontalAlignment="Center" Margin="10" Click="ALbtn_Click" ></Button>
+
+            </StackPanel>
+        </Grid>
+
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="WindowStates">
+                <VisualState x:Name="WideState">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="1024" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="maingrid.(Margin)" Value="0,50,0,0" />
+                        <Setter Target="NSubject.(FontSize)" Value="20" />
+                        <Setter Target="CSubject.(FontSize)" Value="20" />
+                        <Setter Target="NCredits.(FontSize)" Value="20" />
+                        <Setter Target="SDay.(FontSize)" Value="20" />
+                        <Setter Target="NSubject.(Margin)" Value="0,10,0,10" />
+                        <Setter Target="CSubject.(Margin)" Value="0,10,0,10" />
+                        <Setter Target="NCredits.(Margin)" Value="0,10,0,10" />
+                        
+                      
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="NarrowState">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        
+    </Grid>
+</Page>

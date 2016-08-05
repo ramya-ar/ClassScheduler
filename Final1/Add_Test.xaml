@@ -1,0 +1,50 @@
+﻿<Page
+    x:Class="Final1.Add_Test"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Final1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Margin="12,-20,12,0" Background="#FFA69E">
+        <StackPanel VerticalAlignment="Center" Height="Auto" Width="300" >
+                <TextBlock Name="ESubject" Text="Select subject" Foreground="Black"/>
+                <ComboBox x:Name="ESubject1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            <Grid>
+                <StackPanel>
+                <TextBlock Name="ETitle" Text="Title" Foreground="Black" HorizontalAlignment="Left"/>
+                <ComboBox x:Name="ETitle1" HorizontalAlignment="Left">
+                <ComboBoxItem Name="test1">Mid-Term</ComboBoxItem>
+                <ComboBoxItem Name="test2">Finals</ComboBoxItem>
+            </ComboBox>
+                </StackPanel>
+                <StackPanel>
+                <TextBlock Name="EPoints" Text="Points" Foreground="Black" HorizontalAlignment="Right"/>
+                <ComboBox x:Name="EPoints1" HorizontalAlignment="Right">
+                <ComboBoxItem Name="point1">25</ComboBoxItem>
+                <ComboBoxItem Name="point2">50</ComboBoxItem>
+                <ComboBoxItem Name="point3">100</ComboBoxItem>
+                <ComboBoxItem Name="point4">125</ComboBoxItem>
+                <ComboBoxItem Name="point5">150</ComboBoxItem>
+                <ComboBoxItem Name="point6">200</ComboBoxItem>
+            </ComboBox>
+                </StackPanel>
+            </Grid>
+            <TextBlock Name="EDue" Text="Due on" Foreground="Black"/>
+            <TextBlock Name="EDay" Text="Select day" Foreground="Black" HorizontalAlignment="Center"/>
+            <ComboBox x:Name="EDue1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <ComboBoxItem Name="day1">Sunday</ComboBoxItem>
+                <ComboBoxItem Name="day2">Monday</ComboBoxItem>
+                <ComboBoxItem Name="day3">Tuesday</ComboBoxItem>
+                <ComboBoxItem Name="day4">Wednesday</ComboBoxItem>
+                <ComboBoxItem Name="day5">Thursay</ComboBoxItem>
+                <ComboBoxItem Name="day6">Friday</ComboBoxItem>
+                <ComboBoxItem Name="day7">Saturday</ComboBoxItem>
+            </ComboBox>
+            <TextBlock Name="ETime" Text="Select time" Foreground="Black" HorizontalAlignment="Center"/>
+            <TimePicker HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            <Button Name="AAbtn" Content="OK" HorizontalAlignment="Center" Margin="10" Click="AAbtn_Click"></Button>
+        </StackPanel>
+    </Grid>
+</Page>

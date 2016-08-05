@@ -1,0 +1,55 @@
+﻿<Page
+    x:Class="Final1.Add_Score"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Final1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Width="Auto" Height="Auto">
+
+    <Grid Margin="12,-20,12,0" Background="#FFA69E">
+        <StackPanel Name="mainstack" Height="900" Margin="0,100,0,0">
+            <TextBlock Name="ScSubject" Text="Select subject" Foreground="Black" Width="300" TextAlignment="Center"/>
+            <ComboBox x:Name="ScSubject1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="200"/>
+            <TextBlock Name="TPoints" Grid.Row="2"  Text="Maximum Points" Foreground="Black" Width="300" TextAlignment="Center"/>
+            <ComboBox x:Name="TPoints1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="200"/>
+            <TextBlock Name="OPoints" Grid.Row="2"  Text="Points obtained" Foreground="Black" Width="300" TextAlignment="Center"/>
+            <TextBox Name="OPoints1" Width="200"/>
+            <Button Name="APbtn" Content="OK" HorizontalAlignment="Center" Margin="10" Click="APbtn_Click" Width="100"></Button>
+
+        </StackPanel>
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="WindowStates">
+                <VisualState x:Name="WideState">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="1024" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                       
+                        <Setter Target="ScSubject.(FontSize)" Value="20" />
+                        <Setter Target="ScSubject.(Margin)" Value="0,10,0,10" />
+                        <Setter Target="TPoints.(FontSize)" Value="20" />
+                        <Setter Target="TPoints.(Margin)" Value="0,10,0,10" />
+                        
+                        <Setter Target="OPoints.(FontSize)" Value="20" />
+                        <Setter Target="OPoints1.(Margin)" Value="0,10,0,10" />
+                        <Setter Target="ScSubject1.(Height)" Value="30" />
+                        <Setter Target="ScSubject1.(Width)" Value="100" />
+                        <Setter Target="mainstack.(Margin)" Value="0,250,0,0" />
+
+
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="NarrowState">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+    </Grid>
+</Page>
